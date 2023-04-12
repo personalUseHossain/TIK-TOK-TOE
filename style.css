@@ -1,0 +1,116 @@
+/* Universal CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+button{
+    cursor: pointer;
+}
+
+/* Universal CSS */
+
+/* Main CSS */
+
+/* Win count */
+
+
+.wincount{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+
+/* Win count */
+
+.board-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 3rem;
+}
+.board-container button{
+    padding: 10px;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cell{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    cursor: pointer;
+}
+.cell:hover{
+    background-color: rgba(245, 245, 245, 0.718);
+}
+
+/* Win Text */
+
+.wintext{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.652);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: display 1s;
+    gap: 1rem;
+}
+.wintext button{
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+}
+.wintext h1{
+    font-size: 100px;
+    font-weight: 100;
+    color: whitesmoke;
+}
+
+/* Win Text */
+
+/* Border CSS */
+/* 
+    bt - border-top
+    bb - border-bottom
+    br - border-rigth
+    bl - border-left
+*/
+
+.bt{
+    border-top: 2px solid black;
+}
+.bb{
+    border-bottom: 2px solid black;  
+}
+.br{
+    border-right: 2px solid black;  
+}
+.bl{
+    border-left: 2px solid black;
+}
+
+/* Border CSS */
+
+/* Main CSS */

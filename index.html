@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tik Tok Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="wincount">
+      <span> X:<spna id="xcount">0</spna></span>
+      <span> O:<span id="ocount">0</span></span>
+    </p>
+    <div id="wintext" class="wintext">
+      <h1 id="draw"><span id="wintxt"></span> Won</h1>
+      <button onclick="restart()">Restart</button>
+    </div>
+    <div class="board-container">
+      <div class="board">
+        <div class="cell br bb"></div>
+        <div class="cell br bb"></div>
+        <div class="cell bb"></div>
+        <div class="cell br bb"></div>
+        <div class="cell br bb"></div>
+        <div class="cell bb"></div>
+        <div class="cell br"></div>
+        <div class="cell br"></div>
+        <div class="cell"></div>
+      </div>
+      <button onclick="restart()">Reset</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
