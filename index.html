@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p class="wincount">
-      <span> X:<spna id="xcount">0</spna></span>
-      <span> O:<span id="ocount">0</span></span>
-    </p>
+    <i class="fa-solid fa-music cross"></i>
     <div id="wintext" class="wintext">
       <h1 id="draw"><span id="wintxt"></span> Won</h1>
       <button onclick="restart()">Restart</button>
@@ -30,6 +27,17 @@
       </div>
       <button onclick="restart()">Reset</button>
     </div>
+
+    <!-- Audio -->
+    <audio id="running" src="./Sounds/running.mp3"></audio>
+    <audio id="gameover" src="./Sounds/gameover.mp3"></audio>
+    <audio id="turn" src="./Sounds/turn.mp3"></audio>
+    <!-- Audio -->
+
     <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/59ef65778e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

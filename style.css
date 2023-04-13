@@ -8,7 +8,7 @@
 body{
     overflow: hidden;
 }
-button{
+button, i{
     cursor: pointer;
 }
 
@@ -16,19 +16,6 @@ button{
 
 /* Main CSS */
 
-/* Win count */
-
-
-.wincount{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 20px;
-    margin-top: 2rem;
-}
-
-
-/* Win count */
 
 .board-container{
     display: flex;
@@ -87,6 +74,28 @@ button{
     font-weight: 100;
     color: whitesmoke;
 }
+
+/* Icon */
+
+.fa-music{
+    font-size: 20px;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    
+}
+.cross::after{
+    content: '';
+    width: 28px;
+    height: 3px;
+    position: absolute;
+    background: black;
+    transform: rotate(139deg);
+    top: 9px;
+    left: 0;
+}
+
+/* Icon */
 
 /* Win Text */
 

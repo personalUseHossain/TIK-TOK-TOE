@@ -2,16 +2,34 @@
 
 const cells = document.querySelectorAll(".cell");
 const wintextContainer = document.getElementById("wintext");
+const musicIcon = document.querySelector(".fa-music");
 let turn = "O";
-let xcount = document.getElementById("xcount").innerHTML;
-let ocount = document.getElementById("ocount").innerHTML;
+
+//Audios
+
+const running = document.getElementById("running");
+const gameover = document.getElementById("gameover");
+const turn_sound = document.getElementById("turn");
 
 //Event Listener
 cells.forEach((cell) => {
   cell.addEventListener("click", mainFunciton);
 });
+musicIcon.addEventListener("click", music);
 
 //All functions
+
+//Music on-off function
+
+function music(e) {
+  if (e.target.classList.contains("cross")) {
+    e.target.classList.remove("cross");
+    running.play();
+  } else {
+    e.target.classList.add("cross");
+    running.pause();
+  }
+}
 
 //Main function for game
 
@@ -21,13 +39,13 @@ function mainFunciton(e) {
     changeTurn();
     checkWin();
   }
+  turn_sound.play();
 }
 
 //changeing turn
 
 function changeTurn() {
-  if (turn === "X") return (turn = "O");
-  if (turn === "O") return (turn = "X");
+  turn === "X" ? (turn = "O") : (turn = "X");
 }
 
 //Cheking for win
@@ -61,13 +79,8 @@ function callwintext() {
   wintextContainer.style.display = "flex";
   let Whowin = document.getElementById("wintxt");
   turn === "X" ? (Whowin.innerHTML = "O") : (Whowin.innerHTML = "X");
-  if (turn === "X") {
-    Whowin.innerHTML = "O";
-    xcount = xcount + 1;
-  } else if (turn === "O") {
-    Whowin.innerHTML = "X";
-    ocount = ocount + 1;
-  }
+  gameover.play();
+  running.pause();
 }
 
 //Restart function
@@ -77,4 +90,6 @@ function restart() {
     cell.innerHTML = "";
     wintextContainer.style.display = "none";
   });
+  // running.play();
+  // musicIcon.classList.remove("cross");
 }
